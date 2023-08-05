@@ -1,0 +1,301 @@
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4c6edd;
+}
+::-webkit-scrollbar-track {
+  background-color: #5d5b8d;
+  display: none;
+}
+
+.formContainer {
+  background-color: #a7bcff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .formWrapper {
+    background-color: white;
+    padding: 20px 60px;
+    border-radius: 10px;
+    h1 {
+      text-align: center;
+      margin: 0;
+      opacity: 0.7;
+    }
+    p {
+      text-align: center;
+      margin-top: 0;
+      opacity: 0.7;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      input {
+        outline: none;
+        border: none;
+        height: 2rem;
+        border-bottom: 1px solid grey;
+        opacity: 0.5;
+        :focus {
+          border-bottom: 1px solid blue;
+        }
+      }
+      label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+          width: 3rem;
+          margin-right: 2rem;
+        }
+        span {
+          color: grey;
+        }
+      }
+
+      button {
+        height: 2rem;
+        color: #fff;
+        outline: none;
+        background-color: #4c6edd;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #2f57da;
+        }
+      }
+    }
+  }
+}
+
+.home {
+  background-color: #a7bcff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 65%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+
+    .sidebar {
+      flex: 1;
+      background-color: #3e3c61;
+      .navbar {
+        display: flex;
+        align-items: center;
+        background-color: #2f2d52;
+        height: 30px;
+        padding: 15px;
+        color: white;
+        justify-content: space-between;
+
+        .logo {
+          font-weight: bold;
+        }
+        .user {
+          display: flex;
+          gap: 10px;
+
+          img {
+            background-color: #ddddf7;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          button {
+            background-color: #5d5b8d;
+            font-size: 10px;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-weight: 100;
+            margin-left: 4rem;
+          }
+        }
+      }
+      .search {
+        border-bottom: 1px solid gray;
+
+        .searchForm {
+          padding: 10px;
+
+          input {
+            background-color: transparent;
+            border: none;
+            color: white;
+            outline: none;
+
+            &::placeholder {
+              color: lightgray;
+            }
+          }
+        }
+      }
+
+      .userChat {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #2f2d52;
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .userChatInfo {
+          span {
+            font-size: 18px;
+            font-weight: 500;
+          }
+          p {
+            font-size: 14px;
+            color: lightgray;
+          }
+        }
+      }
+    }
+    .chat {
+      flex: 2;
+
+      .chatInfo {
+        height: 30px;
+        padding: 15px;
+        background-color: #5d5b8d;
+        display: flex;
+        justify-content: space-between;
+        color: lightgray;
+      }
+
+      .chatIcons {
+        display: flex;
+        gap: 10px;
+        img {
+          height: 24px;
+          cursor: pointer;
+        }
+      }
+      .messages {
+        background-color: #ddddf7;
+        padding: 10px;
+        height: calc(100% - 130px);
+        overflow: scroll;
+        scroll-behavior: smooth;
+
+        .message {
+          display: flex;
+          gap: 20px;
+
+          .messageInfo {
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+              display: flex;
+              flex-direction: column;
+              color: gray;
+              font-weight: 300;
+            }
+            span {
+              font-size: 12px;
+            }
+          }
+          .messageContent {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 80%;
+            p {
+              background-color: #fff;
+              padding: 10px 20px;
+              border-radius: 0px 10px 10px 10px;
+              color: black;
+              max-width: max-content;
+            }
+            img {
+              width: 50%;
+            }
+          }
+
+          &.owner {
+            flex-direction: row-reverse;
+            .messageContent {
+              align-items: flex-end;
+              p {
+                background-color: #8da4f1;
+                color: white;
+                border-radius: 10px 0 10px 10px;
+              }
+            }
+          }
+        }
+      }
+      .input {
+        background-color: #fff;
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        justify-content: space-between;
+
+        input {
+          width: 100%;
+          border: none;
+          font-size: 18px;
+
+          &:focus {
+            border: none;
+            outline: none;
+          }
+
+          &::placeholder {
+            color: lightgray;
+          }
+        }
+        .send {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          button {
+            margin-right: 10px;
+            background-color: #5b81ff;
+            border: none;
+            height: 30px;
+            border-radius: 2px;
+            color: #fff;
+            &:hover {
+              background-color: #2f57da;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
